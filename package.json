@@ -1,0 +1,17 @@
+{
+  "name": "vbert.pl",
+  "displayName": "vbert.pl",
+  "version": "1.0.0",
+  "description": "My private webpage",
+  "author": "Wojciech Sobczak",
+  "contributors": [
+    {
+      "name": "Wojciech Sobczak",
+      "email": "wsobczak2@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbert/vbert.pl.git"
+  }
+}

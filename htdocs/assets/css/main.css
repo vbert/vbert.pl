@@ -4,11 +4,36 @@
  * File Created: 2023-01-12, 23:57:06
  * Author: Wojciech Sobczak (wsobczak@gmail.com)
  * -----
- * Last Modified: 2023-01-13, 0:35:42
+ * Last Modified: 2023-01-13, 15:06:52
  * Modified By: Wojciech Sobczak (wsobczak@gmail.com)
  * -----
  * Copyright © 2021 - 2023 by vbert
  */
+
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --pink: #f57dff;
+  --blue: #57cbff;
+  --navy-transparent: rgb(10, 25, 47, .5);
+  --navy-shadow: rgba(100, 255, 218, .5);
+  --green-transparent: rgba(100, 255, 218, .2);
+  --font-sans: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+  --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+  --easing: cubic-bezier(0.645,0.045,0.355,1);
+  --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -17,4 +42,118 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: var(--navy);
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--slate);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 54px;
+
+  background-color: var(--navy-transparent);
+}
+
+.toolbar .social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social li a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin: 4px 0 0 0;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--slate);
+  background-color: var(--navy);
+  transition: var(--transition);
+}
+
+.social li a svg {
+  width: 100%;
+  height: 100%;
+  color: var(--slate);
+  fill: none;
+  stroke-width: 2px;
+}
+
+.social li a svg.icon-strava {
+  stroke-width: 0;
+}
+
+.social li a:hover {
+  margin: 0;
+  border-color: var(--green);
+  background-color: var(--green-transparent);
+  box-shadow: 4px 4px 0px 0px var(--navy-shadow);
+}
+
+.social li a:hover svg {
+  color: var(--green);
+}
+
+.card {
+  margin: 10px 0 0 10px;
+  background-color: var(--navy);
+  border: 1px solid var(--green);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2.5rem;
+  background-color: var(--navy);
+}
+
+.card:hover {
+  margin: 0;
+  color: var(--green);
+  box-shadow: 10px 10px 0px 0px var(--navy-shadow);
+}
+
+.card:hover .card-body {
+  background-color: var(--green-transparent);
+}
+
+.card h1,
+.card h3 {
+  line-height: 1.5;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  text-align: center;
+}
+
+.card h3 a {
+  color: var(--green);
+}
+
+.card .card-body img {
+  width: 150px;
+  border: 1px solid var(--green);
+  border-radius: 50%;
 }

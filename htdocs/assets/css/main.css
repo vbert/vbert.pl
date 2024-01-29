@@ -4,7 +4,7 @@
  * File Created: 2023-01-12, 23:57:06
  * Author: Wojciech Sobczak (wsobczak@gmail.com)
  * -----
- * Last Modified: 2023-01-14, 18:46:06
+ * Last Modified: 2024-01-29, 22:30:43
  * Modified By: Wojciech Sobczak (wsobczak@gmail.com)
  * -----
  * Copyright © 2021 - 2023 by vbert
@@ -177,7 +177,7 @@ h1, h2, h3, h4, p {
 }
 
 .card .card-body img {
-  width: 150px;
+  width: 220px;
   margin-bottom: 1rem;
   border: 1px solid var(--green);
   border-radius: 50%;

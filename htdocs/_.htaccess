@@ -1,0 +1,11 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^vbert\.pl$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.vbert\.pl$
+RewriteRule ^/?$ "https\:\/\/vbert\.pl\/" [R=301,L]
+
+
+#Wersja PHP zmieniona: 2024-09-11 09:47:58
+AddHandler application/x-httpd-php82 php 

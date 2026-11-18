@@ -1,5 +1,6 @@
 cgi-bin/
 .htaccess
+.well-known
 
 .DS_Store
 ._.DS_Store
